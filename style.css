@@ -1,0 +1,183 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+
+/*Body:
+-Give the body element a relative postion for the scrollspy to work
+-Add a font family to the whole page*/
+
+/*Video:
+-Set the video as background, make it fixed.
+-make sure it appears behind all elements
+-make it spread across the whole webpage*/
+body{
+    background: url(images/northern_lights.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Vollkorn', serif;
+    
+    position: relative; /*for scrollspy*/
+}
+
+/*Video does not work in small devices:
+-Hide the video and set picture as background(use media queries)
+-make it spread across the whole webpage*/
+
+/*Style the Home section and elements inside it:
+-reduce the margin bottom of h1 and h2. (As jumbotron automatically sets some margin and padding)
+-style the button and its hover state*/
+#home .jumbotron{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#home h1{
+    margin-bottom: 30px;
+}
+
+#home h2{
+    margin-bottom: 50px;
+}
+
+#home .btn-default{
+    background: rgb(39, 157, 202);
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+/*Style the About section:
+-add padding top  so that the nav link is active before the carousel hits the top border of the page
+-Limit its width in big devices to 1000px
+-make heading bold and set the dimensions of pictures*/
+.container{
+    max-width: 1000px;
+}
+#about{
+    text-align: center;
+    color: #ddd;
+    padding-top: 100px;
+  background-color: #1f3159;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#1f3159), to(#2c457f));
+  background-image: -webkit-linear-gradient(top, #1f3159, 0%, #2c457f, 100%);
+  background-image: -moz-linear-gradient(top, #1f3159 0%, #2c457f 100%);
+  background-image: linear-gradient(to bottom, #1f3159 0%, #122c64 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1f3159', endColorstr='#ff2c457f', GradientType=0);
+}
+#about h2{
+    font-weight: bold;
+}
+#about p{
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.aboutImage{
+    height: 120px;
+}
+
+/*Style the promise section:
+-add padding-top for early activation of the nav link.
+-set the width of the carousel and center it
+-set the height of pictures and center them inside the carousel items
+-Move the carousel caption under the pictures*/
+#promise{
+    padding-top: 100px;
+}
+#myCarousel{
+    width: 60%;
+    margin: 0 auto;
+    /*position: relative;*/
+    /*text-align: center;*/
+}
+#myCarousel .carousel-indicators{
+    /*position: absolute;
+    top: 405px*/
+}
+#myCarousel h2{
+    color: #fff;
+    
+}
+.carousel-inner .item img{
+    height: 400px;
+    margin: 0 auto;
+}
+.carousel-caption{
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
+}
+
+/*Style the pictures and nav-brand for different screens*/
+@media (max-width: 768px){
+    .carousel-inner .item img{
+        height: 300px;
+    }
+    .carousel-inner h2{
+        font-size: 23px;
+    }
+}
+@media (max-width: 400px){
+    .carousel-inner .item img{
+        height: 200px;
+    }
+    .carousel-inner h2{
+        font-size: 17px;
+    }
+    .navbar-brand{
+        font-size: 12px;
+    }
+}
+
+/*Style the footer*/
+#footer{
+    color: #fff;
+    font-size: 15px;
+    background-color: rgba(29, 167, 179,0.1);
+    margin-top: 150px;
+}
+
+/*Style the navigation bar using a navbar css generator*/
+.navbar-custom {
+  font-size: 18px;
+  background-color: #273e72;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#345398), to(#273e72));
+  background-image: -webkit-linear-gradient(top, #345398, 0%, #273e72, 100%);
+  background-image: -moz-linear-gradient(top, #345398 0%, #273e72 100%);
+  background-image: linear-gradient(to bottom, #345398 0%, #273e72 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff345398', endColorstr='#ff273e72', GradientType=0);
+}
+.navbar-custom .navbar-brand {
+  color: #fff;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #c0c0c0;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #1f3159;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#1f3159), to(#2c457f));
+  background-image: -webkit-linear-gradient(top, #1f3159, 0%, #2c457f, 100%);
+  background-image: -moz-linear-gradient(top, #1f3159 0%, #2c457f 100%);
+  background-image: linear-gradient(to bottom, #1f3159 0%, #2c457f 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1f3159', endColorstr='#ff2c457f', GradientType=0);
+}
+.navbar-custom .navbar-toggle {
+  border-color: #dddddd;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #cccccc;
+}
