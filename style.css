@@ -139,6 +139,7 @@ body{
     font-size: 15px;
     background-color: rgba(29, 167, 179,0.1);
     margin-top: 150px;
+    padding: 10px 0;
 }
 
 /*Style the navigation bar using a navbar css generator*/
